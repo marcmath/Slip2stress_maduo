@@ -162,9 +162,9 @@ projfinal = pyproj.Proj(proj='lcc', init='EPSG:3415') # projection of the mesh
 ### Segment 1 ###
 #################
 # Load the slip model
-tri1 = np.loadtxt('/home/marcmath/Bureau/Work/tibet/Duo/last/fault_geom_sgmt_1_tri.txt')
-xyz1 = np.loadtxt('/home/marcmath/Bureau/Work/tibet/Duo/last/fault_geom_sgmt_1_coord.txt')
-slipmat1 = np.loadtxt('/home/marcmath/Bureau/Work/tibet/Duo/last/fault_slip_sgmt_1.in')
+tri1 = np.loadtxt('../model/fault_geom_sgmt_1_tri.txt')
+xyz1 = np.loadtxt('../model/fault_geom_sgmt_1_coord.txt')
+slipmat1 = np.loadtxt('../model/fault_slip_sgmt_1.in')
 
 # Convert slip model geometry in the same coordinates system as Maduo meshing
 XY_0,XY_1 = pyproj.transform(projfinal,projini,xyz1[:,0],xyz1[:,1])
@@ -256,9 +256,9 @@ writeNetcdf4Paraview(file_prefix, grid_x1[0,:], grid_y1[:,1], ldataName, lgridde
 #################
 # Load the slip model
 
-tri2 = np.loadtxt('/home/marcmath/Bureau/Work/tibet/Duo/last/fault_geom_sgmt_2_tri.txt')
-xyz2 = np.loadtxt('/home/marcmath/Bureau/Work/tibet/Duo/last/fault_geom_sgmt_2_coord.txt')
-slipmat2 = np.loadtxt('/home/marcmath/Bureau/Work/tibet/Duo/last/fault_slip_sgmt_2.in')
+tri2 = np.loadtxt('../model/fault_geom_sgmt_2_tri.txt')
+xyz2 = np.loadtxt('../model/fault_geom_sgmt_2_coord.txt')
+slipmat2 = np.loadtxt('../model/fault_slip_sgmt_2.in')
 
 # Convert slip model geometry in the same coordinates system as Maduo meshing
 
@@ -347,9 +347,9 @@ writeNetcdf4Paraview(file_prefix, grid_x2[0,:], grid_y2[:,1], ldataName, lgridde
 ### Segment 3 ###
 #################
 # Load the slip model
-tri3 = np.loadtxt('/home/marcmath/Bureau/Work/tibet/Duo/last/fault_geom_sgmt_3_tri.txt')
-xyz3 = np.loadtxt('/home/marcmath/Bureau/Work/tibet/Duo/last/fault_geom_sgmt_3_coord.txt')
-slipmat3 = np.loadtxt('/home/marcmath/Bureau/Work/tibet/Duo/last/fault_slip_sgmt_3.in')
+tri3 = np.loadtxt('../model/fault_geom_sgmt_3_tri.txt')
+xyz3 = np.loadtxt('../model/fault_geom_sgmt_3_coord.txt')
+slipmat3 = np.loadtxt('../model/fault_slip_sgmt_3.in')
 
 # Convert slip model geometry in the same coordinates system as Maduo meshing
 XY_0,XY_1 = pyproj.transform(projfinal,projini,xyz3[:,0],xyz3[:,1])
