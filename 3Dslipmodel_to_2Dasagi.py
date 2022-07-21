@@ -151,8 +151,8 @@ def writeNetcdf4SeisSol(sname, x, y, aName, aData):
     
 ############################################################################################
  # This script project the 3D slip model for the Maduo earthquake on a plane and
-#build the 2D asagi files needed to use with FL33    
-
+#build the 2D asagi file needed to use with FL33    
+# The slip model is composed of three segments that are processed individually
 
 projini = pyproj.Proj('EPSG:32647') # Projection of the slip model
 projfinal = pyproj.Proj(proj='lcc', init='EPSG:3415') # projection of the mesh 
