@@ -196,7 +196,7 @@ dip1      = 81.6 #
 xp1, yp1, zp1 = plane_coord(minx, maxx, ys1[0], ys1[-1], -dip1, strike1, maxz1, depthmax1)
 p_xyz1 = np.array([xp1, yp1, zp1]).T # Coordinates of the plane corners
 
-# compute scalar and vector needed to pass form 3D from 2D
+# compute scalar and vector needed to pass form 3D to 2D
 ub1, ua1, ta1, tb1 = compute_unit_vec_trans_plane(xp1,yp1,zp1)
 
 # project the barycenter of each subfault on the plane
