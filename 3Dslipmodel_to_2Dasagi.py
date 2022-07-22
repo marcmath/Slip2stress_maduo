@@ -196,7 +196,7 @@ dip1      = 81.6 #
 xp1, yp1, zp1 = plane_coord(minx, maxx, ys1[0], ys1[-1], -dip1, strike1, maxz1, depthmax1)
 p_xyz1 = np.array([xp1, yp1, zp1]).T # Coordinates of the plane corners
 
-# compute scalar and vector needed to pass form 3D to 2D
+# compute scalar and vector needed to pass from 3D to 2D
 ub1, ua1, ta1, tb1 = compute_unit_vec_trans_plane(xp1,yp1,zp1)
 
 # project the barycenter of each subfault on the plane
@@ -290,7 +290,7 @@ dip2      = 81.6 #
 xp2, yp2, zp2 = plane_coord(minx2, maxx2, ys2[0], ys2[-1], dip2, strike2, maxz2, depthmax2) 
 p_xyz2 = np.array([xp2, yp2, zp2]).T #Coordinates of the plane corners
 
-# compute scalar and vector needed to pass form 3D from 2D
+# compute scalar and vector needed to pass from 3D to 2D
 ub2, ua2, ta2, tb2 = compute_unit_vec_trans_plane(xp2,yp2,zp2)
 
 # project the barycenter of each subfault on the plane
@@ -380,7 +380,7 @@ dip3      = 81.6 #
 xp3, yp3, zp3 = plane_coord(minx3, maxx3, ys3[0], ys3[-1], -dip3, strike3, maxz3, depthmax3)
 p_xyz3 = np.array([xp3, yp3, zp3]).T #Coordinates of the plane corners
 
-# compute scalar and vector needed to pass form 3D from 2D
+# compute scalar and vector needed to pass from 3D to 2D
 ub3, ua3, ta3, tb3 = compute_unit_vec_trans_plane(xp3,yp3,zp3)
 
 # project the barycenter of each subfault on the plane
