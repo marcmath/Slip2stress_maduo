@@ -167,11 +167,11 @@ xyz1 = np.loadtxt('../model/fault_geom_sgmt_1_coord.txt')
 slipmat1 = np.loadtxt('../model/fault_slip_sgmt_1.in')
 
 # Convert slip model geometry in the same coordinates system as Maduo meshing
-XY_0,XY_1 = pyproj.transform(projfinal,projini,xyz1[:,0],xyz1[:,1])
+XY_0,XY_1 = pyproj.transform(projini,projfinal,xyz1[:,0],xyz1[:,1])
 xyz1[:,0] = XY_0 
 xyz1[:,1] = XY_1
 
-XY_0,XY_1 = pyproj.transform(projfinal,projini,slipmat1[:,0],slipmat1[:,1])
+XY_0,XY_1 = pyproj.transform(projini,projfinal,slipmat1[:,0],slipmat1[:,1])
 slipmat1[:,0] = XY_0
 slipmat1[:,1] = XY_1
 
@@ -262,10 +262,10 @@ slipmat2 = np.loadtxt('../model/fault_slip_sgmt_2.in')
 
 # Convert slip model geometry in the same coordinates system as Maduo meshing
 
-XY_0,XY_1 = pyproj.transform(projfinal,projini,xyz2[:,0],xyz2[:,1])
+XY_0,XY_1 = pyproj.transform(projini,projfinal,xyz2[:,0],xyz2[:,1])
 xyz2[:,0] = XY_0
 xyz2[:,1] = XY_1
-XY_0,XY_1 = pyproj.transform(projfinal,projini,slipmat2[:,0],slipmat2[:,1])
+XY_0,XY_1 = pyproj.transform(projini,projfinal,slipmat2[:,0],slipmat2[:,1])
 slipmat2[:,0] = XY_0
 slipmat2[:,1] = XY_1
 
@@ -352,10 +352,10 @@ xyz3 = np.loadtxt('../model/fault_geom_sgmt_3_coord.txt')
 slipmat3 = np.loadtxt('../model/fault_slip_sgmt_3.in')
 
 # Convert slip model geometry in the same coordinates system as Maduo meshing
-XY_0,XY_1 = pyproj.transform(projfinal,projini,xyz3[:,0],xyz3[:,1])
+XY_0,XY_1 = pyproj.transform(projini,projfinal,xyz3[:,0],xyz3[:,1])
 xyz3[:,0] = XY_0
 xyz3[:,1] = XY_1
-XY_0,XY_1 = pyproj.transform(projfinal,projini,slipmat3[:,0],slipmat3[:,1])
+XY_0,XY_1 = pyproj.transform(projini,projfinal,slipmat3[:,0],slipmat3[:,1])
 slipmat3[:,0] = XY_0
 slipmat3[:,1] = XY_1
 
